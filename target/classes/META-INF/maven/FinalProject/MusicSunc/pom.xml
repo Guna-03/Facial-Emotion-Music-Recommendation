@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>FinalProject</groupId>
+  <artifactId>MusicSunc</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+  <groupId>org.openpnp</groupId>
+  <artifactId>opencv</artifactId>
+  <version>4.5.1-2</version>
+  </dependency>
+  
+  <dependency>
+    <groupId>org.bytedeco</groupId>
+    <artifactId>opencv-platform</artifactId>
+    <version>4.10.0-1.5.11</version>
+</dependency>
+
+  
+  <dependency>
+  <groupId>com.microsoft.onnxruntime</groupId>
+  <artifactId>onnxruntime</artifactId>
+  <version>1.18.0</version>
+</dependency>
+
+<dependency>
+  <groupId>org.openjfx</groupId>
+  <artifactId>javafx-controls</artifactId>
+  <version>21.0.2</version>
+</dependency>
+<dependency>
+  <groupId>org.openjfx</groupId>
+  <artifactId>javafx-swing</artifactId>
+  <version>21.0.2</version>
+</dependency>
+<dependency>
+  <groupId>org.openjfx</groupId>
+  <artifactId>javafx-web</artifactId>
+  <version>21.0.2</version>
+</dependency>
+
+<dependency>
+    <groupId>javazoom</groupId>
+    <artifactId>jlayer</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+<dependency>
+    <groupId>org.glassfish</groupId>
+    <artifactId>javax.json</artifactId>
+    <version>1.1.4</version>
+</dependency>
+
+
+<dependency>
+    <groupId>javax.json</groupId>
+    <artifactId>javax.json-api</artifactId>
+    <version>1.1.4</version>
+</dependency>
+
+
+</dependencies>
+
+</project>
