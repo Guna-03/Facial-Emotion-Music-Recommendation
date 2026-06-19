@@ -56,7 +56,7 @@ public class EmotionDetectionPanel extends JPanel {
         nextBtn.addActionListener(e -> {
             cameraActive = false;
             nextClicked = true;
-        });
+      });
 
         add(innerPanel);
 
@@ -106,7 +106,7 @@ public class EmotionDetectionPanel extends JPanel {
         nextClicked = false;
         detectedEmotion = null;
 
-        SwingUtilities.invokeLater(() -> emotionLabel.setText("Detecting emotion..."));
+      SwingUtilities.invokeLater(() -> emotionLabel.setText("Detecting emotion..."));
 
         try {
             FaceDetector faceDetection = new FaceDetector(CASCADE_PATH);

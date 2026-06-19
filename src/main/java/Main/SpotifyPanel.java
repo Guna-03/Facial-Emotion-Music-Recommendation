@@ -84,8 +84,14 @@ public class SpotifyPanel extends JPanel {
         os.close();
 
         int responseCode = conn.getResponseCode();
-        if (responseCode != 200)
+        if (responseCode != 200) {
+            InputStream errorStream = conn.getErrorStream();
+            if (errorStream != null) {
+                String error = new String(errorStream.readAllBytes());
+                System.out.println("Spotify Error: " + error);
+            }
             throw new IOException("Spotify Auth Failed (HTTP " + responseCode + ")");
+        }
 
         InputStream is = conn.getInputStream();
         JsonReader reader = Json.createReader(is);
@@ -104,7 +110,7 @@ public class SpotifyPanel extends JPanel {
     }
 
     private List<SpotifyTrack> searchSpotifyTracks(String accessToken, String query) throws Exception {
-        String api = "https://api.spotify.com/v1/search?q=" + URLEncoder.encode(query, "UTF-8") + "&type=track&limit=20";
+        String api = "https://open.spotify.com/search" + URLEncoder.encode(query, "UTF-8") + "&type=track&limit=10";
         URL url = new URL(api);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestProperty("Authorization", "Bearer " + accessToken);

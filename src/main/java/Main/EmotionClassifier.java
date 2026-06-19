@@ -2,7 +2,6 @@ package Main;
 
 import java.io.File;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class EmotionClassifier {
     // Emotion profiles with 7 basic emotions
